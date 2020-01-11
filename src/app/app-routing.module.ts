@@ -1,7 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { GifComponent } from './gif/gif.component';
+import { ResultsListComponent } from './results-list/results-list.component';
+
+const routes: Routes = [
+    {
+        path: '',
+        component: ResultsListComponent,
+    },
+    {
+        path: 'gif/:id',
+        component: GifComponent,
+    },
+    {
+        path: '**',
+        redirectTo: '/'
+    }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

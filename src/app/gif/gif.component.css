@@ -1,0 +1,18 @@
+div.showcase {
+    display: flex;
+    flex-direction: row;
+}
+
+div.showcase-details {
+    margin-left: 2rem;
+}
+
+@media(max-width: 660px) {
+    div.showcase {
+        display: block;
+    }
+
+    div.showcase-details {
+        margin-left: 0rem;
+    }
+}

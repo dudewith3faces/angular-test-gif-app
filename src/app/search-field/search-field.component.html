@@ -1,11 +1,12 @@
 
 <div class="row">
     <div class="col-md-12">
-        <form class="form-horizontal">
+        <form class="form-horizontal"  [formGroup]="search" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <div class="col-md-10">
                     <input type="text"
-                           name="giphy-search"
+                    [ngStyle]="error && {'border-color': 'red'}"
+                        formControlName="q"
                            class="form-control"
                            placeholder="type your search here"
                     />

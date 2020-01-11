@@ -1,4 +1,3 @@
-<div>
-    <!-- Implement result list here -->
-    Results List
+<div *ngFor="let gif of (gifs | async)">
+        <app-gif-mini [gif]="gif"></app-gif-mini>
 </div>
