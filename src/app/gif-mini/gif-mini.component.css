@@ -1,10 +1,16 @@
 div {
     cursor: pointer;
     margin: 2rem;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 }
 
 img {
-    width: 500;
+    width: 200px;
+}
+
+@media(max-width: 660px) {
+    div {
+        width: 50%;
+    }
 }

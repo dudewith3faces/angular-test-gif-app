@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { select } from 'ng2-redux';
-import { Observable, of } from 'rxjs';
+
 import { IGif } from '../Interface';
 import { AppService } from '../app.service';
-import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs-compat/operator/map';
 
 @Component({
   selector: 'app-gif',

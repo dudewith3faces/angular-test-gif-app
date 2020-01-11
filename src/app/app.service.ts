@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IData, IGif, IState, IAction } from './Interface';
-import { select, NgRedux } from 'ng2-redux';
+import { NgRedux } from 'ng2-redux';
 import { actionType } from './action';
 
 @Injectable({

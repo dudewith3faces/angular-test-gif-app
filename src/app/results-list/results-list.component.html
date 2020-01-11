@@ -1,3 +1,5 @@
-<div *ngFor="let gif of (gifs | async)">
+<div class="">
+    <span *ngFor="let gif of gifs | async">
         <app-gif-mini [gif]="gif"></app-gif-mini>
+    </span>
 </div>

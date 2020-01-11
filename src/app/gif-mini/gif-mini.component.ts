@@ -1,10 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { IGif, IAction, IState } from '../Interface';
-import { actionType } from '../action';
-import { NgRedux } from 'ng2-redux';
-import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-import { AppService } from '../app.service';
+import { Router } from '@angular/router';
+
+import { IGif } from '../Interface';
 
 @Component({
   selector: 'app-gif-mini',
@@ -14,10 +12,8 @@ import { AppService } from '../app.service';
 export class GifMiniComponent {
     @Input() gif: IGif;
     constructor(
-        private ngRedux: NgRedux<IState>,
         private router: Router,
-        private sanitizer: DomSanitizer,
-        private appService: AppService
+        private sanitizer: DomSanitizer
         ) {}
 
     photoUrl() {
@@ -27,14 +23,4 @@ export class GifMiniComponent {
     onClick() {
         this.router.navigate(['/', 'gif', this.gif.id]);
     }
-
-
-//     private getGif(gif: IGif): IGif {
-//     let payload: IGif = gif;
-//     if (this.isEmpty(gif)) {
-//         this.appService.getGiphy()
-//     }
-
-//     return payload;
-// }
 }
