@@ -14,7 +14,7 @@ import { actionType } from '../action';
 })
 export class SearchFieldComponent  {
     private search: FormGroup;
-    private error: boolean;
+    public error: boolean;
     private q: string;
     name = 'Search Field';
     constructor(private ngRedux: NgRedux<IState>, private appService: AppService, private router: Router, private route: ActivatedRoute) {
@@ -36,7 +36,7 @@ export class SearchFieldComponent  {
 
     }
 
-    private async onSubmit() {
+    public async onSubmit() {
         const { q }: { q: string } = this.search.value;
         if (!q) {
             this.error = true;
